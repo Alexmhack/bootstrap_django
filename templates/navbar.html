@@ -1,5 +1,5 @@
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+<nav class="navbar navbar-expand-lg navbar-dark primary-color container-fluid">
 
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#">Navbar</a>
@@ -29,11 +29,11 @@
 
             <!-- Dropdown -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">About Us</a>
+                    <a class="dropdown-item" href="{% url 'contact_form' %}">Contact Us</a>
+                    <a class="dropdown-item" href="#"></a>
                 </div>
             </li>
 
