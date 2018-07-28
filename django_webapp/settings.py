@@ -27,7 +27,7 @@ SECRET_KEY = secret_key.read()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pacific-brushlands-76325.herokuapp.com']
 
 
 # Application definition
