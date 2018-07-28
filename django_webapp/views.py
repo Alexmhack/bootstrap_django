@@ -8,7 +8,7 @@ def home_page(request):
 
 
 def features_page(request):
-	return render(request, 'bootstrap/feature_page.html')
+	return render(request, 'bootstrap/features_page.html')
 
 
 def pricing_page(request):
