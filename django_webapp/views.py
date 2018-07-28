@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.loader import get_template
-from django.core.email import EmailMessage
+from django.core.mail import EmailMessage
 
 
 def home_page(request):
@@ -26,7 +26,7 @@ def contact_page(request):
 		user_subject = request.POST.get('subject')
 		user_message = request.POST.get('message')
 
-		template = get_template('contact_tempalate.txt')
+		template = get_template('contact_form.txt')
 		context = {
 			'contact_name': user_name,
 			'contact_email': user_email,
@@ -38,11 +38,11 @@ def contact_page(request):
 		email = EmailMessage(
 			"New contact form submission",
 			content,
-			"Your website ",
+			"FirebaseDjangoApp",
 			['78030psg@gmail.com'],
 			headers={'Reply-To': user_email})
 
 		email.send()
-		return redirect('contact_form')
+		return redirect('contact_page')
 
 	return render(request, 'contact.html')
